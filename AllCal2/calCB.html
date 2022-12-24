@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math-Helper</title>
+    <link rel="stylesheet" href="calnCr.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <link rel="icon" href="//xor.pw/favicon.ico" type="image/x-icon" />
+    <script>
+        function getbit(num, pos) {
+            result = (1<<pos) & num
+            if (result != 0)
+                return true;
+            else
+                return false;
+        }
+        function cb() {
+            var n1 = parseInt(document.getElementById('n1').value);
+            var n2 = parseInt(document.getElementById('n2').value);
+            document.getElementById('res').value = getbit(n1, n2);
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="menu-bar">Home</div>
+        <ul>
+            <li><a target="_blank" href="calnCr.html">nCr</a></li>
+            <li><a target="_blank" href="calnPr.html">nPr</a></li>
+            <li><a target="_blank" href="calhcf.html">HCF</a></li>
+            <li><a target="_blank" href="callcm.html">LCM</a></li>
+            <li><a target="_blank" href="calxor.html">X-OR</a></li>
+            <li><a href="#">Check ith Bit</a></li>
+            <li><a target="_blank" href="calLBP.html">Last Bit Pos</a></li>
+            <li><a target="_blank" href="calpow.html">Power</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>C-ith-B Calculator</h1>
+        <p>
+            Provide two inputs, select input and output types, then Check ith bit </p>
+        <!-- <form action="#" method="post"> -->
+        <div class="form">
+            <label for="v1">I. Input</label>: <select name="type1" title="Data type of input 1" class="t">
+                <option value="2">binary (base 2)</option>
+                <option value="10" selected="selected">decimal (base 10)</option>
+                <option value="16">hexadecimal (base 16)</option>
+                <option value="256">ASCII (base 256)</option>
+            </select>
+            <!-- <textarea name="v1" id="n1" class="v" style="height:2.5rem" placeholder="enter n"
+                    autofocus="autofocus"></textarea> -->
+            <br /><br />
+            <input type="text" class="v" id="n1" style="height:2.5rem" placeholder="number" autofocus="autofocus">
+            <br /><br />
+
+            <label for="v2">II. Input</label>: <select name="type2" title="Data type of input 2" class="t">
+                <option value="2">binary (base 2)</option>
+                <option value="10" selected="selected">decimal (base 10)</option>
+                <option value="16">hexadecimal (base 16)</option>
+                <option value="256">ASCII (base 256)</option>
+            </select>
+            <!-- <textarea name="v2" id="n2" class="v" style="height:2.5rem" placeholder="enter r"></textarea> -->
+            <br /><br />
+            <input type="text" class="v" id="n2" style="height:2.5rem" placeholder="position" autofocus="autofocus">
+
+            <br /><br /><button onclick="cb()" type="submit" title="Calculate nPr" id="xor">Check ith
+                bit</button><br /><br />
+
+            <label for="v3">III. Output</label>: <select name="type3" title="Data type of the output" class="t">
+                <option value="2">binary (base 2)</option>
+                <option value="10" selected="selected">decimal (base 10)</option>
+                <option value="16">hexadecimal (base 16)</option>
+                <option value="256">ASCII (base 256)</option>
+            </select>
+            <!-- <textarea name="v3" class="v" readonly="readonly" id="res" style="height:2.5rem"
+                    placeholder="nPr"></textarea> -->
+            <br /><br />
+            <input type="text" class="v" id="res" style="height:2.5rem" placeholder="true or false"
+                autofocus="autofocus">
+        </div>
+        <!-- </form> -->
+        <!-- <footer>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </footer> -->
+    </section>
+    <!-- <script src="calnCr.js"></script> -->
+</body>
+
+</html>
